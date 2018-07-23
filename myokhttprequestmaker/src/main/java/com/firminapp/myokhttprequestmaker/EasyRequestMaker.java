@@ -250,7 +250,7 @@ public class EasyRequestMaker extends OkHttpClient  {
 
     public EasyRequestMaker setHeader(Header header){
 
-        getRequestBuilder().addHeader(header.getKey(),header.getValue());
+        requestBuilder.addHeader(header.getKey(),header.getValue());
 
         return  this;
     }
@@ -503,7 +503,7 @@ public class EasyRequestMaker extends OkHttpClient  {
         if (method.equals(MyMethods.GET))
         {
             Log.e(TAG,urlbuilder.build().toString());
-            requestBuilder= new Request.Builder()
+            requestBuilder
                     .url(urlbuilder.build().toString())
                     .get();
                     //  .addHeader("access_token",token)
@@ -527,7 +527,7 @@ public class EasyRequestMaker extends OkHttpClient  {
             if(isFile)
             {
                 Log.e(TAG, "sending a file...");
-                requestBuilder = new Request.Builder()
+                requestBuilder
                         .url(urlbuilder.build().toString())
                         .put(reqbodyfile);
                         // .addHeader("access_token",token)
@@ -536,7 +536,7 @@ public class EasyRequestMaker extends OkHttpClient  {
             }
             else
             {
-                requestBuilder= new Request.Builder()
+                requestBuilder
                         .url(urlbuilder.build().toString())
                         .put(requestBody.build())
                         // .addHeader("access_token",token)
@@ -560,7 +560,7 @@ public class EasyRequestMaker extends OkHttpClient  {
             if(isFile)
             {
                 Log.e(TAG, "sending a file...");
-                requestBuilder = new Request.Builder()
+                requestBuilder
                         .url(urlbuilder.build().toString())
                         .post(reqbodyfile);
                         // .addHeader("access_token",token)
@@ -569,7 +569,7 @@ public class EasyRequestMaker extends OkHttpClient  {
             }
             else
             {
-                requestBuilder= new Request.Builder()
+                requestBuilder
                         .url(urlbuilder.build().toString())
                         .post(requestBody.build());
                         // .addHeader("access_token",token)
