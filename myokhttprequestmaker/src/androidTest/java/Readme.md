@@ -15,6 +15,7 @@ in your build.gradle (project)
       			  }
       		}
       	}
+      	
 
 and in your build.gradl(app)
 
