@@ -1,9 +1,27 @@
-#MyOkhttprequestMaker
-##introduction
+# EasyRequestMaker
+## introduction
 this is my simple Okhttp request maker.
 it's based on Okhtt library.
 
 ## Usage
+
+in your build.gradle (project)
+
+      allprojects {
+      		repositories {
+      			...
+      			maven {
+      			 url 'https://jitpack.io'
+      			  }
+      		}
+      	}
+      	
+
+and in your build.gradl(app)
+
+       dependencies {
+       	        implementation 'com.github.firminApp:EasyRequestMaker:v1.0.2'
+       	}
 below is a simple code of an exemple of usage of this library. it's just amazing!
   
   ###exemple
@@ -34,7 +52,7 @@ below is a simple code of an exemple of usage of this library. it's just amazing
                     });
                     
 
-just create an instance of the class MyOkHttpRequestMaker.
+just create an instance of the class EasyRequestMaker.
 
 and then put all your params by calling the appropriate methode.
 
