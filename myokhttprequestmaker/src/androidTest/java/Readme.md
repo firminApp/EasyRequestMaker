@@ -51,7 +51,7 @@ below is a simple code of an exemple of usage of this library. it's just amazing
                     });
                     
 
-just create an instance of the class MyOkHttpRequestMaker.
+just create an instance of the class EasyRequestMaker.
 
 and then put all your params by calling the appropriate methode.
 
