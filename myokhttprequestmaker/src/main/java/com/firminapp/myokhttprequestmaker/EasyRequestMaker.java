@@ -251,6 +251,11 @@ public class EasyRequestMaker extends OkHttpClient  {
     public EasyRequestMaker setHeader(Header header){
 
         requestBuilder.addHeader(header.getKey(),header.getValue());
+        try {
+            sendedParamsForLog.put("HEADER key:  "+header.getKey(),header.getValue());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         return  this;
     }
