@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/EasyRequestMaker.iml" filepath="$PROJECT_DIR$/EasyRequestMaker.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/myokhttprequestmaker/myokhttprequestmaker.iml" filepath="$PROJECT_DIR$/myokhttprequestmaker/myokhttprequestmaker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/easyRequestMaker/easyRequestMaker.iml" filepath="$PROJECT_DIR$/easyRequestMaker/easyRequestMaker.iml" />
     </modules>
   </component>
 </project>
