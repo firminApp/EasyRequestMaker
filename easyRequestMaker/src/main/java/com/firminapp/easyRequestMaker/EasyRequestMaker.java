@@ -165,7 +165,7 @@ public class EasyRequestMaker extends OkHttpClient  {
         reqbodyfile.addFormDataPart(dataPart.getKey(),dataPart.getValue());
 
         try {
-            sendedParamsForLog.put("DataPart ","key "+dataPart.getKey()+" value:"+dataPart.getValue() );
+            sendedParamsForLog.put("DataPart key "+dataPart.getKey()," value:"+dataPart.getValue() );
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -195,7 +195,7 @@ public class EasyRequestMaker extends OkHttpClient  {
 
         }
         try {
-            sendedParamsForLog.put("DataPart ","key "+dataPart.getKey()+"this is a file " );
+            sendedParamsForLog.put("DataPart key "+dataPart.getKey(),"this is a file " );
         } catch (JSONException e) {
             e.printStackTrace();
         }
