@@ -300,7 +300,7 @@ public class EasyRequestMaker extends OkHttpClient  {
             @Override
             public void onFailure(Call call, IOException e) {
                 objectlistebner.onUnsuccefull("echec","1110 "+e.getMessage());
-                Log.e("onJsonObject", "request failled "+e.getMessage());
+               // Log.e("onJsonObject", "request failled "+e.getMessage());
             }
 
             @Override
@@ -337,7 +337,7 @@ public class EasyRequestMaker extends OkHttpClient  {
 //                            Log.e("cachbody after",response.body().string());
                         }
                 }
-                Log.e("probleme", "retour null");
+               // Log.e("probleme", "retour null");
 
             }
         });
@@ -387,7 +387,7 @@ public class EasyRequestMaker extends OkHttpClient  {
                         {
                             marraylistener.onUnsuccefull(body, response.code()+"");
 
-                            Log.e("probleme", body + " : is not a JSONArray");
+                       //     Log.e("probleme", body + " : is not a JSONArray");
 
                         }
 
@@ -521,11 +521,11 @@ public class EasyRequestMaker extends OkHttpClient  {
 
         // String token=SessionManager.getInstance().getTokenRefreshToken().get(SessionManager.KEY_TOKEN);
         // Log.e(TAG,"token= "+token);
-        Log.e(TAG,urlbuilder.build().toString());
+        //Log.e(TAG,urlbuilder.build().toString());
 
         if (method.equals(MyMethods.GET))
         {
-            Log.e(TAG,urlbuilder.build().toString());
+          //  Log.e(TAG,urlbuilder.build().toString());
             requestBuilder
                     .url(urlbuilder.build().toString())
                     .get();
