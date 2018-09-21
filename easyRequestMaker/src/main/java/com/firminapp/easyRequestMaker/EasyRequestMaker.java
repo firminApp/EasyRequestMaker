@@ -316,7 +316,7 @@ public class EasyRequestMaker extends OkHttpClient  {
                                    // AppDatabase.getDatabase(context).itemAndResponseString().addNew(tosave);
                                     objectlistebner.onJsonObjetResponse(new JSONObject(body));
 
-                                    Log.e("JsonObjectreceved", body);
+                                  //  Log.e("JsonObjectreceved", body);
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                     objectlistebner.onUnsuccefull(body, response.code()+"");
@@ -326,7 +326,7 @@ public class EasyRequestMaker extends OkHttpClient  {
 
                             } else {
 
-                                Log.e("probleme", body + " :n'est pas un jsonObject. a vérifier le format du json");
+                               // Log.e("probleme", body + " :n'est pas un jsonObject. a vérifier le format du json");
                                 objectlistebner.onUnsuccefull(body, response.code()+"");
 
                             }
@@ -357,7 +357,7 @@ public class EasyRequestMaker extends OkHttpClient  {
         this.getClientCall().enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
-                Log.e("onjsonArray", "request failled");
+               // Log.e("onjsonArray", "request failled");
 
                 marraylistener.onUnsuccefull("Echec","1110 "+e.getMessage());
             }
@@ -371,7 +371,7 @@ public class EasyRequestMaker extends OkHttpClient  {
 
                     body = response.body().string();
 
-                    Log.e("response111",body);
+                    //Log.e("response111",body);
                     if (response.isSuccessful()) {
 
                         if (body.startsWith("[")) {
@@ -380,14 +380,14 @@ public class EasyRequestMaker extends OkHttpClient  {
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
-                                Log.e(TAG,"Exeption receved json: "+e.getMessage());
+                              //  Log.e(TAG,"Exeption receved json: "+e.getMessage());
 
                             }
                         } else
                         {
                             marraylistener.onUnsuccefull(body, response.code()+"");
 
-                            Log.e("probleme", body + " : n'est pas un jsonArray a vérifier le format du json");
+                            Log.e("probleme", body + " : is not a JSONArray");
 
                         }
 
@@ -405,7 +405,7 @@ public class EasyRequestMaker extends OkHttpClient  {
 
                 }
 
-                Log.e("probleme", "retour null");
+               // Log.e("probleme", "retour null");
 
             }
         });
@@ -459,7 +459,7 @@ public class EasyRequestMaker extends OkHttpClient  {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                Log.e("responseonfail", response.body().string());
+              //  Log.e("responseonfail", response.body().string());
             }
         });
         // Log.e("jsonArray", jsonArrayreturn.toString());
@@ -603,7 +603,7 @@ public class EasyRequestMaker extends OkHttpClient  {
         }
         else
 
-            Log.e("probleme", "MyOkHttpRequestMaker ne sais pas quelle methode http utiliser");
+            Log.e("probleme", "ypu must specify the http method GET, PUT, or POST");
         //File file = new File(context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), "OkhttpCach43");
 
         return requestBuilder;
