@@ -80,11 +80,13 @@ public class EasyRequestMaker extends OkHttpClient  {
     private Context context;
     private Request request;
     private FormBody.Builder requestBody;
+    private RequestBody body;
     private MultipartBody.Builder reqbodyfile;
     private HttpUrl.Builder urlbuilder;
     private String TAG=EasyRequestMaker.class.getSimpleName();
     private JSONObject sendedParamsForLog;
     private Request.Builder requestBuilder;
+    private boolean isMediatype=false;
 
     /**
      * boolean permettant de savoir s'il faut faire le caching de la reponse
@@ -239,6 +241,17 @@ public class EasyRequestMaker extends OkHttpClient  {
         return  this;
     }
 
+    public void setMediaTyp(String data,String typeMedia){
+        try {
+            sendedParamsForLog.put("Mediatype",data);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        isMediatype=true;
+        MediaType mediaType = MediaType.parse(typeMedia);
+        body=RequestBody.create(mediaType,data);
+
+    }
 
     public EasyRequestMaker setGetListe(ArrayList<Get>listgets){
         for (Get get:listgets)
@@ -557,6 +570,16 @@ public class EasyRequestMaker extends OkHttpClient  {
                        // .build();
                // Log.e(TAG, "url send file: "+request.url()) ;
             }
+            if(isMediatype)
+            {
+                Log.e(TAG, "sending a mediaType...");
+                requestBuilder
+                        .url(urlbuilder.build().toString())
+                        .post(body);
+                // .addHeader("access_token",token)
+                // .build();
+                // Log.e(TAG, "url send file: "+request.url()) ;
+            }
             else
             {
                 requestBuilder
@@ -687,6 +710,11 @@ public class EasyRequestMaker extends OkHttpClient  {
 
 
     public JSONObject getSendedParamsForLog(){
+        try {
+            sendedParamsForLog.put("url",urlbuilder.toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
         return this.sendedParamsForLog;
     }
 }
