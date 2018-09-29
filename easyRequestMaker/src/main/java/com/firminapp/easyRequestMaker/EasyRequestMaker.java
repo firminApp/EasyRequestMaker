@@ -19,8 +19,11 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+
+import javax.rmi.CORBA.Util;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -604,7 +607,7 @@ public class EasyRequestMaker extends OkHttpClient  {
             {
                 Log.e(TAG, "sending a mediaType...");
                 requestBuilder
-                        .url(url)
+                        .url(urlbuilder.build().toString())
                         .post(body);
                 // .addHeader("access_token",token)
                 // .build();
@@ -723,5 +726,9 @@ public class EasyRequestMaker extends OkHttpClient  {
             e.printStackTrace();
         }
         return this.sendedParamsForLog;
+    }
+    public void mediatype()
+    {
+
     }
 }
