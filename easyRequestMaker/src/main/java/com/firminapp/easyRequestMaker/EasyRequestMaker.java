@@ -216,6 +216,12 @@ public class EasyRequestMaker extends OkHttpClient  {
 
         return  this;
     }
+    public EasyRequestMaker setUrlNotEncoded(String urlo){
+        this.urlbuilder=HttpUrl.parse(urlo).newBuilder();
+        this.url=urlo;
+
+        return  this;
+    }
 
     public EasyRequestMaker setGet(Get get){
 
@@ -570,16 +576,7 @@ public class EasyRequestMaker extends OkHttpClient  {
                        // .build();
                // Log.e(TAG, "url send file: "+request.url()) ;
             }
-            if(isMediatype)
-            {
-                Log.e(TAG, "sending a mediaType...");
-                requestBuilder
-                        .url(urlbuilder.build().toString())
-                        .post(body);
-                // .addHeader("access_token",token)
-                // .build();
-                // Log.e(TAG, "url send file: "+request.url()) ;
-            }
+
             else
             {
                 requestBuilder
@@ -603,6 +600,16 @@ public class EasyRequestMaker extends OkHttpClient  {
             /**
              * verifions si c'est un fichier que le gar veut envoyer plutot que de simple données
              */
+            if(isMediatype)
+            {
+                Log.e(TAG, "sending a mediaType...");
+                requestBuilder
+                        .url(url)
+                        .post(body);
+                // .addHeader("access_token",token)
+                // .build();
+                // Log.e(TAG, "url send file: "+request.url()) ;
+            }else
             if(isFile)
             {
                 Log.e(TAG, "sending a file...");
