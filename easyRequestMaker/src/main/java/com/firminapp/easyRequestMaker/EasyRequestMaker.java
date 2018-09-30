@@ -23,7 +23,6 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-import javax.rmi.CORBA.Util;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -674,9 +673,6 @@ public class EasyRequestMaker extends OkHttpClient  {
     {
         OkHttpClient client=new OkHttpClient();
         Request.Builder req=null;
-
-
-
           req= new Request.Builder()
                     .url(serverIp)
                     .get()
