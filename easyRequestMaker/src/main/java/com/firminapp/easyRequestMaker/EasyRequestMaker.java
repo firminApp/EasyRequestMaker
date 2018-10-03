@@ -568,6 +568,16 @@ public class EasyRequestMaker extends OkHttpClient  {
             /**
              * verifions si c'est un fichier que le gar veut envoyer plutot que de simple données
              */
+            if(isMediatype)
+            {
+                Log.e(TAG, "sending a mediaType...");
+                requestBuilder
+                        .url(urlbuilder.build().toString())
+                        .post(body);
+                // .addHeader("access_token",token)
+                // .build();
+                // Log.e(TAG, "url send file: "+request.url()) ;
+            }
             if(isFile)
             {
                 Log.e(TAG, "sending a file...");
