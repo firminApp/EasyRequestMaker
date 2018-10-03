@@ -573,7 +573,7 @@ public class EasyRequestMaker extends OkHttpClient  {
                 Log.e(TAG, "sending a mediaType...");
                 requestBuilder
                         .url(urlbuilder.build().toString())
-                        .post(body);
+                        .put(body);
                 // .addHeader("access_token",token)
                 // .build();
                 // Log.e(TAG, "url send file: "+request.url()) ;
