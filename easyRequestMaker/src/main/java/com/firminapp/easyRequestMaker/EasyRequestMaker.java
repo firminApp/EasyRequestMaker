@@ -250,12 +250,13 @@ public class EasyRequestMaker extends OkHttpClient  {
     }
 
     public void setMediaTyp(String data,String typeMedia){
+        isMediatype=true;
         try {
             sendedParamsForLog.put("Mediatype",data);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        isMediatype=true;
+
         MediaType mediaType = MediaType.parse(typeMedia);
         body=RequestBody.create(mediaType,data);
 
@@ -570,7 +571,7 @@ public class EasyRequestMaker extends OkHttpClient  {
              */
             if(isMediatype)
             {
-                Log.e(TAG, "sending a mediaType...");
+                Log.e(TAG, "sending a mediaType with put...");
                 requestBuilder
                         .url(urlbuilder.build().toString())
                         .put(body);
@@ -580,7 +581,7 @@ public class EasyRequestMaker extends OkHttpClient  {
             }
             if(isFile)
             {
-                Log.e(TAG, "sending a file...");
+                Log.e(TAG, "sending a file... with put");
                 requestBuilder
                         .url(urlbuilder.build().toString())
                         .put(reqbodyfile.build());
@@ -616,7 +617,7 @@ public class EasyRequestMaker extends OkHttpClient  {
              */
             if(isMediatype)
             {
-                Log.e(TAG, "sending a mediaType...");
+                Log.e(TAG, "sending a mediaType... post");
                 requestBuilder
                         .url(urlbuilder.build().toString())
                         .post(body);
@@ -626,7 +627,7 @@ public class EasyRequestMaker extends OkHttpClient  {
             }else
             if(isFile)
             {
-                Log.e(TAG, "sending a file...");
+                Log.e(TAG, "sending a file... post");
                 requestBuilder
                         .url(urlbuilder.build().toString())
                         .post(reqbodyfile.build());
