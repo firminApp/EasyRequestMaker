@@ -545,6 +545,12 @@ public class EasyRequestMaker extends OkHttpClient  {
         // Log.e(TAG,"token= "+token);
         //Log.e(TAG,urlbuilder.build().toString());
 
+        if (method.equals(MyMethods.DELETE))
+        {
+            requestBuilder
+                    .url(urlbuilder.build().toString())
+                    .delete();
+        }
         if (method.equals(MyMethods.GET))
         {
           //  Log.e(TAG,urlbuilder.build().toString());
