@@ -8,6 +8,8 @@ public enum  MyMethods {
 
         GET(),
         POST(),
+        DELETE(),
         PUT();
+
 
 }
