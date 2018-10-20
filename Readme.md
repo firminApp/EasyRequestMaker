@@ -20,7 +20,7 @@ in your build.gradle (project)
 and in your build.gradl(app)
 
        dependencies {
-       	        implementation 'com.github.firminApp:EasyRequestMaker:v1.0.5'
+       	        implementation 'com.github.firminApp:EasyRequestMaker:v1.1.5'
        	}
 below is a simple code of an exemple of usage of this library. it's just amazing!
   
