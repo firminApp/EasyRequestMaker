@@ -97,7 +97,9 @@ you can call one of these methods or both
      # Documentation
      ## Classes:
      
-      EasyRequestMaker:   Only class to instatiate
+      ## EasyRequestMaker:  
+       
+                        Only class to instatiate
       
       ## Methods
                         setContext(yourContext);
