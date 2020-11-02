@@ -93,12 +93,24 @@ you can call one of these methods or both
                                       }
                           })
                          ;
- 
+     
+     # Documentation
+     ## Classes:
+     
+      EasyRequestMaker:   Only class to instatiate
+      
+      ## Methods
+                        setContext(yourContext);
+                        setUrl(yourUrl);
+                        setMethod(MyMethod.[GET,POST,PUT];
+                        setHaeder(new Header("key","value")
+                        set DataPart
+        
  ## futures
 
  ## Open for any contributions. create pull request or send me an email firminapp@gmail.com
  
-  
+                 
   
 @author Firmin
 
