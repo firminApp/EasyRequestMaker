@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AndroidStudioProjects-EasyRequestMaker.iml" filepath="$PROJECT_DIR$/.idea/modules/AndroidStudioProjects-EasyRequestMaker.iml" group="EasyRequestMaker" />
       <module fileurl="file://$PROJECT_DIR$/EasyRequestMaker.iml" filepath="$PROJECT_DIR$/EasyRequestMaker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/EasyRequestMaker-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/EasyRequestMaker-app.iml" group="EasyRequestMaker/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/easyRequestMaker/EasyRequestMaker-easyRequestMaker.iml" filepath="$PROJECT_DIR$/.idea/modules/easyRequestMaker/EasyRequestMaker-easyRequestMaker.iml" group="EasyRequestMaker/easyRequestMaker" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/easyRequestMaker/easyRequestMaker.iml" filepath="$PROJECT_DIR$/easyRequestMaker/easyRequestMaker.iml" />
     </modules>
