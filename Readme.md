@@ -24,7 +24,7 @@ and in your build.gradl(app)
        	}
 below is a simple code of an exemple of usage of this library. it's just amazing!
   
-  ###exemple
+  ### Exemple
   
       EasyRequestMaker requestMaker=new new EasyRequestMaker();
             requestMaker.setUrl(WebSercives.URL_SLIDER)
