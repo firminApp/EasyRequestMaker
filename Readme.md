@@ -56,7 +56,7 @@ just create an instance of the class EasyRequestMaker.
 
 and then put all your params by calling the appropriate methode.
 
-the three methods below are required 
+these three methods below are required 
 
       setContext(yourContext);
       setUrl(yourUrl);
@@ -64,7 +64,7 @@ the three methods below are required
 
 according to the data you are waiting for the server,
 
-you can call one of thes methods or both
+you can call one of these methods or both
 
         onJsonArrayReceved(new OnJsonArrayResponseListener() {
                           @Override
@@ -95,6 +95,8 @@ you can call one of thes methods or both
                          ;
  
  ## futures
+
+ ## Open for any contributions. create pull request or send me an email firminapp@gmail.com
  
   
   
