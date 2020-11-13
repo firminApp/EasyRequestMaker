@@ -20,7 +20,7 @@ in your build.gradle (project)
 and in your build.gradl(app)
 
        dependencies {
-       	        implementation 'com.github.firminApp:EasyRequestMaker:1.1.5'
+       	        implementation 'com.github.firminApp:EasyRequestMaker:1.2.0'
        	}
 below is a simple code of an exemple of usage of this library. it's just amazing!
   
@@ -81,7 +81,7 @@ you can call one of these methods or both
                           }
                       });
                       //or
-           .onJsonObjectReceved(new OnJsonObjectResponseListener() {
+                     .onJsonObjectReceved(new OnJsonObjectResponseListener() {
                               @Override
                               public void onJsonObjetResponse(JSONObject object) {
                                   
@@ -95,7 +95,7 @@ you can call one of these methods or both
                          ;
      
      # Documentation
-     ## Classes:
+      ## Classes:
      
       ## EasyRequestMaker:  
        
