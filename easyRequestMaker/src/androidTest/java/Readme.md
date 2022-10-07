@@ -42,19 +42,16 @@ below is a simple code of an exemple of usage of this library. it's just amazing
                         public void onJonArrayResponse(JSONArray arry) {
                             Log.e("array",arry.toString());
                         }
-    
                         @Override
                         public void onUnsuccefull(String response, String code) {
                                 Log.e("respon","response pas bonne :code= "+code+" response="+response);
-    
-    
                         }
                     });
                     
 
 just create an instance of the class EasyRequestMaker.
 
-and then put all your params by calling the appropriate methode.
+and then put all your params by calling the appropriate method.
 
 the three methods below are required 
 
@@ -64,7 +61,7 @@ the three methods below are required
 
 according to the data you are waiting for the server,
 
-you can call one of thes methods or both
+you can call one of these methods or both
 
         onJsonArrayReceved(new OnJsonArrayResponseListener() {
                           @Override
@@ -72,31 +69,23 @@ you can call one of thes methods or both
                               Log.e("array",arry.toString());
                               // process your Json data here
                           }
-      
                           @Override
                           public void onUnsuccefull(String response, String code) {
                                   Log.e("respon","response pas bonne :code= "+code+" response="+response);
                                     // there is an error
-      
                           }
                       });
                       //or
            .onJsonObjectReceved(new OnJsonObjectResponseListener() {
                               @Override
                               public void onJsonObjetResponse(JSONObject object) {
-                                  
-          
                                }
-          
                               @Override
                               public void onUnsuccefull(String response, String code) {
                                       }
                           })
                          ;
- 
  ## futures
- 
-  
-  
+
 @author Firmin
 
